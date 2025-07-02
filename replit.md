@@ -118,6 +118,8 @@ KRPL PROJECTS is a premium real estate agency website built as a full-stack appl
 
 Changelog:
 - July 02, 2025. Initial setup
+- July 02, 2025. Added KRPL PROJECTS logo to navbar and footer
+- July 02, 2025. Updated office address to Centrum Plaza, Golf Course Road Sector-53
 
 ## User Preferences
 

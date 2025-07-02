@@ -4,7 +4,7 @@ export const COMPANY_INFO = {
   description: "Your trusted partner in premium real estate for over 15 years. Delivering exceptional properties and unmatched service in Gurugram.",
   phone: "+91 98765 43210",
   email: "info@krplprojects.com",
-  address: "Golf Course Extension Road, Sector 56, Gurugram, Haryana 122011",
+  address: "Office No.52c, Ground Floor, Centrum Plaza, Golf Course Road Sector-53 Gurugram, Haryana, 122002 India",
   businessHours: "Mon - Sun: 9:00 AM - 8:00 PM",
   experience: "15+",
   projectsCount: "10+",
