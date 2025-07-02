@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { COMPANY_INFO, NAVIGATION_ITEMS } from "@/lib/constants";
+import logoPath from "@assets/WhatsApp Image 2025-06-30 at 16.16.31_1751447837515.jpeg";
 
 export default function Footer() {
   const featuredProjects = [
@@ -16,7 +17,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-3xl font-bold mb-4">{COMPANY_INFO.name}</h3>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src={logoPath} 
+                alt={`${COMPANY_INFO.name} Logo`} 
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
+              <h3 className="text-3xl font-bold">{COMPANY_INFO.name}</h3>
+            </div>
             <p className="text-blue-200 mb-6 max-w-md">{COMPANY_INFO.description}</p>
             <div className="flex space-x-4">
               <a href="#" className="bg-brand-blue hover:bg-brand-gold transition-colors p-3 rounded-full">

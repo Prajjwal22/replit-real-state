@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { COMPANY_INFO, NAVIGATION_ITEMS } from "@/lib/constants";
+import logoPath from "@assets/WhatsApp Image 2025-06-30 at 16.16.31_1751447837515.jpeg";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -14,9 +15,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-brand-navy">{COMPANY_INFO.name}</h1>
-              <p className="text-xs text-brand-gray">{COMPANY_INFO.tagline}</p>
+            <div className="flex items-center space-x-3">
+              <img 
+                src={logoPath} 
+                alt={`${COMPANY_INFO.name} Logo`} 
+                className="h-12 w-auto object-contain"
+              />
+              <div className="flex-shrink-0">
+                <h1 className="text-2xl font-bold text-brand-navy">{COMPANY_INFO.name}</h1>
+                <p className="text-xs text-brand-gray">{COMPANY_INFO.tagline}</p>
+              </div>
             </div>
           </Link>
 

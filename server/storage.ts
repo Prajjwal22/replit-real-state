@@ -173,7 +173,14 @@ export class MemStorage implements IStorage {
 
     projectsData.forEach(project => {
       const id = this.currentProjectId++;
-      this.projects.set(id, { ...project, id });
+      this.projects.set(id, { 
+        ...project, 
+        id,
+        area: project.area || null,
+        price: project.price || null,
+        possession: project.possession || null,
+        featured: project.featured || false
+      });
     });
   }
 
@@ -202,9 +209,14 @@ export class MemStorage implements IStorage {
       },
     ];
 
-    testimonialsData.forEach(testimonial => {
+    testimonialsData.forEach(testimonialData => {
       const id = this.currentTestimonialId++;
-      this.testimonials.set(id, { ...testimonial, id });
+      const testimonial: Testimonial = { 
+        ...testimonialData, 
+        id,
+        project: testimonialData.project || null
+      };
+      this.testimonials.set(id, testimonial);
     });
   }
 
@@ -222,7 +234,14 @@ export class MemStorage implements IStorage {
 
   async createProject(insertProject: InsertProject): Promise<Project> {
     const id = this.currentProjectId++;
-    const project: Project = { ...insertProject, id };
+    const project: Project = { 
+      ...insertProject, 
+      id,
+      area: insertProject.area || null,
+      price: insertProject.price || null,
+      possession: insertProject.possession || null,
+      featured: insertProject.featured || false
+    };
     this.projects.set(id, project);
     return project;
   }
@@ -244,7 +263,11 @@ export class MemStorage implements IStorage {
 
   async createTestimonial(insertTestimonial: InsertTestimonial): Promise<Testimonial> {
     const id = this.currentTestimonialId++;
-    const testimonial: Testimonial = { ...testimonial, id };
+    const testimonial: Testimonial = { 
+      ...insertTestimonial, 
+      id,
+      project: insertTestimonial.project || null
+    };
     this.testimonials.set(id, testimonial);
     return testimonial;
   }
