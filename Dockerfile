@@ -1,16 +1,19 @@
 FROM node:18-alpine
 
-# Update Alpine packages to reduce vulnerabilities
-RUN apk update && apk upgrade --no-cache
-
+# Set working directory
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install
-
+# Copy everything
 COPY . .
 
+# Install dependencies
+RUN npm install
+
+# Build the frontend
+RUN npm run build
+
+# Expose port (Vite default or custom server)
 EXPOSE 3000
 
-CMD ["node", "index.js"]
+# Start the server (you might need to adjust this)
+CMD ["npm", "run", "start"]
