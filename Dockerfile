@@ -3,14 +3,20 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+# Install dependencies
 COPY package*.json ./
 RUN npm install
 
+# Copy source
 COPY . .
 
+# Optional: build frontend manually (if needed)
+# RUN cd client && npm install && npm run build
+
+# Build frontend and backend (output into root dist/)
 RUN npm run build
 
-# ---- Production Stage ----
+# ---- Run Stage ----
 FROM node:18-alpine
 
 WORKDIR /app
@@ -18,14 +24,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install --omit=dev
 
-# Copy backend build
+# Copy built output
 COPY --from=builder /app/dist ./dist
-
-# Copy built frontend (Vite output)
-COPY --from=builder /app/client/dist ./client/dist
-
-# ✅ REMOVE this line — you don’t have a /public folder
-# COPY --from=builder /app/public ./public
 
 EXPOSE 5000
 
