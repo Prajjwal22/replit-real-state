@@ -3,34 +3,29 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Install deps
 COPY package*.json ./
 RUN npm install
 
-# Copy source files
 COPY . .
 
-# Run both: build frontend + bundle backend
 RUN npm run build
 
-# ---- Production Runner ----
+# ---- Production Stage ----
 FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy only production deps
 COPY package*.json ./
 RUN npm install --omit=dev
 
-# Copy built output from builder
+# Copy backend build
 COPY --from=builder /app/dist ./dist
+
+# Copy built frontend (Vite output)
 COPY --from=builder /app/client/dist ./client/dist
 
-# Copy static assets (if any)
-COPY --from=builder /app/public ./public
-
-# Include any other config files you need
-COPY --from=builder /app/.replit ./  # optional
+# ✅ REMOVE this line — you don’t have a /public folder
+# COPY --from=builder /app/public ./public
 
 EXPOSE 5000
 
