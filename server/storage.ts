@@ -1,4 +1,14 @@
-import { projects, contacts, testimonials, type Project, type Contact, type Testimonial, type InsertProject, type InsertContact, type InsertTestimonial } from "@shared/schema";
+import {
+  projects,
+  contacts,
+  testimonials,
+  type Project,
+  type Contact,
+  type Testimonial,
+  type InsertProject,
+  type InsertContact,
+  type InsertTestimonial,
+} from "@shared/schema";
 
 export interface IStorage {
   // Projects
@@ -44,10 +54,16 @@ export class MemStorage implements IStorage {
         developer: "Essel Group",
         location: "MG Road",
         sector: "Sector 28",
-        description: "Premium commercial tower with modern amenities and strategic location in the heart of Gurugram's business district.",
-        features: ["Commercial Spaces", "Modern Architecture", "Prime Location", "High Speed Elevators"],
+        description:
+          "Premium commercial tower with modern amenities and strategic location in the heart of Gurugram's business district.",
+        features: [
+          "Commercial Spaces",
+          "Modern Architecture",
+          "Prime Location",
+          "High Speed Elevators",
+        ],
         status: "Premium",
-        imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl: "/essel4.jpg",
         category: "commercial",
         amenities: ["24/7 Security", "Power Backup", "Parking", "Maintenance"],
         featured: true,
@@ -57,10 +73,17 @@ export class MemStorage implements IStorage {
         developer: "Platinum Group",
         location: "Golf Course Extension Road",
         sector: "Sector 65",
-        description: "Luxury residential tower offering premium lifestyle with world-class amenities and stunning city views.",
-        features: ["Luxury Apartments", "City Views", "Premium Amenities", "Vastu Compliant"],
+        description:
+          "Luxury residential tower offering premium lifestyle with world-class amenities and stunning city views.",
+        features: [
+          "Luxury Apartments",
+          "City Views",
+          "Premium Amenities",
+          "Vastu Compliant",
+        ],
         status: "Luxury",
-        imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
         amenities: ["Swimming Pool", "Gym", "Clubhouse", "Gardens", "Security"],
         featured: true,
@@ -70,12 +93,25 @@ export class MemStorage implements IStorage {
         developer: "Suncity Builders",
         location: "Sohna Road",
         sector: "Sector 54",
-        description: "Integrated township with residential, commercial, and recreational facilities spread across acres of green landscape.",
-        features: ["Integrated Township", "Green Spaces", "Multiple Amenities", "Schools & Hospitals"],
+        description:
+          "Integrated township with residential, commercial, and recreational facilities spread across acres of green landscape.",
+        features: [
+          "Integrated Township",
+          "Green Spaces",
+          "Multiple Amenities",
+          "Schools & Hospitals",
+        ],
         status: "Township",
-        imageUrl: "https://images.unsplash.com/photo-1555636222-cae831e670b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1555636222-cae831e670b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "township",
-        amenities: ["Schools", "Hospital", "Shopping Complex", "Sports Facilities", "Parks"],
+        amenities: [
+          "Schools",
+          "Hospital",
+          "Shopping Complex",
+          "Sports Facilities",
+          "Parks",
+        ],
         featured: true,
       },
       {
@@ -83,12 +119,25 @@ export class MemStorage implements IStorage {
         developer: "Suncity Builders",
         location: "Sohna Road",
         sector: "Sector 83",
-        description: "Premium residential project with spacious apartments and modern amenities in a serene environment.",
-        features: ["Spacious Apartments", "Modern Design", "Green Environment", "Premium Location"],
+        description:
+          "Premium residential project with spacious apartments and modern amenities in a serene environment.",
+        features: [
+          "Spacious Apartments",
+          "Modern Design",
+          "Green Environment",
+          "Premium Location",
+        ],
         status: "Ready",
-        imageUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Clubhouse", "Swimming Pool", "Gym", "Children's Play Area", "Security"],
+        amenities: [
+          "Clubhouse",
+          "Swimming Pool",
+          "Gym",
+          "Children's Play Area",
+          "Security",
+        ],
         featured: false,
       },
       {
@@ -96,12 +145,25 @@ export class MemStorage implements IStorage {
         developer: "Paras Buildtech",
         location: "Golf Course Extension Road",
         sector: "Sector 59",
-        description: "Contemporary living spaces with lush green surroundings and modern amenities designed for comfortable living.",
-        features: ["Contemporary Design", "Green Spaces", "Modern Amenities", "Prime Location"],
+        description:
+          "Contemporary living spaces with lush green surroundings and modern amenities designed for comfortable living.",
+        features: [
+          "Contemporary Design",
+          "Green Spaces",
+          "Modern Amenities",
+          "Prime Location",
+        ],
         status: "Ready",
-        imageUrl: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Landscaped Gardens", "Clubhouse", "Sports Facilities", "Security", "Power Backup"],
+        amenities: [
+          "Landscaped Gardens",
+          "Clubhouse",
+          "Sports Facilities",
+          "Security",
+          "Power Backup",
+        ],
         featured: true,
       },
       {
@@ -109,12 +171,25 @@ export class MemStorage implements IStorage {
         developer: "DLF Limited",
         location: "Golf Course Road",
         sector: "DLF Phase 2",
-        description: "Ultra-luxury apartments with world-class amenities in the heart of Gurugram's most prestigious location.",
-        features: ["Ultra Luxury", "World Class Amenities", "Premium Location", "Iconic Design"],
+        description:
+          "Ultra-luxury apartments with world-class amenities in the heart of Gurugram's most prestigious location.",
+        features: [
+          "Ultra Luxury",
+          "World Class Amenities",
+          "Premium Location",
+          "Iconic Design",
+        ],
         status: "Premium",
-        imageUrl: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Concierge Service", "Swimming Pool", "Spa", "Fine Dining", "Valet Parking"],
+        amenities: [
+          "Concierge Service",
+          "Swimming Pool",
+          "Spa",
+          "Fine Dining",
+          "Valet Parking",
+        ],
         featured: true,
       },
       {
@@ -122,12 +197,25 @@ export class MemStorage implements IStorage {
         developer: "Paras Buildtech",
         location: "Golf Course Extension Road",
         sector: "Sector 1",
-        description: "Elegant residential project offering premium lifestyle with thoughtfully designed apartments and modern facilities.",
-        features: ["Premium Lifestyle", "Elegant Design", "Modern Facilities", "Strategic Location"],
+        description:
+          "Elegant residential project offering premium lifestyle with thoughtfully designed apartments and modern facilities.",
+        features: [
+          "Premium Lifestyle",
+          "Elegant Design",
+          "Modern Facilities",
+          "Strategic Location",
+        ],
         status: "Premium",
-        imageUrl: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Clubhouse", "Swimming Pool", "Gym", "Landscaped Gardens", "24/7 Security"],
+        amenities: [
+          "Clubhouse",
+          "Swimming Pool",
+          "Gym",
+          "Landscaped Gardens",
+          "24/7 Security",
+        ],
         featured: false,
       },
       {
@@ -135,12 +223,25 @@ export class MemStorage implements IStorage {
         developer: "Trevoc Group",
         location: "New Gurugram",
         sector: "Sector 56",
-        description: "Innovative design meets luxury living with panoramic city views and premium amenities in this architectural marvel.",
-        features: ["Innovative Design", "City Views", "Premium Amenities", "Architectural Marvel"],
+        description:
+          "Innovative design meets luxury living with panoramic city views and premium amenities in this architectural marvel.",
+        features: [
+          "Innovative Design",
+          "City Views",
+          "Premium Amenities",
+          "Architectural Marvel",
+        ],
         status: "Luxury",
-        imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Sky Lounge", "Infinity Pool", "Fitness Center", "Rooftop Gardens", "Concierge"],
+        amenities: [
+          "Sky Lounge",
+          "Infinity Pool",
+          "Fitness Center",
+          "Rooftop Gardens",
+          "Concierge",
+        ],
         featured: true,
       },
       {
@@ -148,12 +249,25 @@ export class MemStorage implements IStorage {
         developer: "DLF Limited",
         location: "New Gurugram",
         sector: "Sector 76",
-        description: "Ultra-premium residences with exclusive amenities and unparalleled luxury in DLF's flagship development.",
-        features: ["Ultra Premium", "Exclusive Amenities", "Flagship Development", "Unparalleled Luxury"],
+        description:
+          "Ultra-premium residences with exclusive amenities and unparalleled luxury in DLF's flagship development.",
+        features: [
+          "Ultra Premium",
+          "Exclusive Amenities",
+          "Flagship Development",
+          "Unparalleled Luxury",
+        ],
         status: "Ultra Luxury",
-        imageUrl: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Private Elevator", "Butler Service", "Exclusive Clubhouse", "Wine Cellar", "Private Garden"],
+        amenities: [
+          "Private Elevator",
+          "Butler Service",
+          "Exclusive Clubhouse",
+          "Wine Cellar",
+          "Private Garden",
+        ],
         featured: true,
       },
       {
@@ -161,25 +275,38 @@ export class MemStorage implements IStorage {
         developer: "Birla Estates",
         location: "Sohna Road",
         sector: "Sector 63A",
-        description: "Thoughtfully designed homes by Birla Group with world-class infrastructure and sustainable living features.",
-        features: ["Sustainable Living", "World Class Infrastructure", "Thoughtful Design", "Premium Brand"],
+        description:
+          "Thoughtfully designed homes by Birla Group with world-class infrastructure and sustainable living features.",
+        features: [
+          "Sustainable Living",
+          "World Class Infrastructure",
+          "Thoughtful Design",
+          "Premium Brand",
+        ],
         status: "Premium",
-        imageUrl: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+        imageUrl:
+          "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
         category: "residential",
-        amenities: ["Eco-friendly Features", "Smart Home Technology", "Clubhouse", "Swimming Pool", "Jogging Track"],
+        amenities: [
+          "Eco-friendly Features",
+          "Smart Home Technology",
+          "Clubhouse",
+          "Swimming Pool",
+          "Jogging Track",
+        ],
         featured: true,
       },
     ];
 
-    projectsData.forEach(project => {
+    projectsData.forEach((project) => {
       const id = this.currentProjectId++;
-      this.projects.set(id, { 
-        ...project, 
+      this.projects.set(id, {
+        ...project,
         id,
         area: project.area || null,
         price: project.price || null,
         possession: project.possession || null,
-        featured: project.featured || false
+        featured: project.featured || false,
       });
     });
   }
@@ -189,32 +316,35 @@ export class MemStorage implements IStorage {
       {
         name: "Rajesh Sharma",
         designation: "DLF Aralias Resident",
-        message: "KRPL PROJECTS made our dream of owning a luxury apartment in DLF Aralias come true. Their expertise and dedication are unmatched.",
+        message:
+          "KRPL PROJECTS made our dream of owning a luxury apartment in DLF Aralias come true. Their expertise and dedication are unmatched.",
         rating: 5,
         project: "DLF Aralias",
       },
       {
         name: "Priya Gupta",
         designation: "Property Investor",
-        message: "Exceptional service and deep market knowledge. They helped us find the perfect investment property at Paras Floret.",
+        message:
+          "Exceptional service and deep market knowledge. They helped us find the perfect investment property at Paras Floret.",
         rating: 5,
         project: "Paras Floret",
       },
       {
         name: "Amit Kumar",
         designation: "Homeowner",
-        message: "Professional, reliable, and trustworthy. KRPL PROJECTS delivered beyond our expectations for our Suncity Township purchase.",
+        message:
+          "Professional, reliable, and trustworthy. KRPL PROJECTS delivered beyond our expectations for our Suncity Township purchase.",
         rating: 5,
         project: "Suncity Township",
       },
     ];
 
-    testimonialsData.forEach(testimonialData => {
+    testimonialsData.forEach((testimonialData) => {
       const id = this.currentTestimonialId++;
-      const testimonial: Testimonial = { 
-        ...testimonialData, 
+      const testimonial: Testimonial = {
+        ...testimonialData,
         id,
-        project: testimonialData.project || null
+        project: testimonialData.project || null,
       };
       this.testimonials.set(id, testimonial);
     });
@@ -225,7 +355,9 @@ export class MemStorage implements IStorage {
   }
 
   async getFeaturedProjects(): Promise<Project[]> {
-    return Array.from(this.projects.values()).filter(project => project.featured);
+    return Array.from(this.projects.values()).filter(
+      (project) => project.featured
+    );
   }
 
   async getProject(id: number): Promise<Project | undefined> {
@@ -234,13 +366,13 @@ export class MemStorage implements IStorage {
 
   async createProject(insertProject: InsertProject): Promise<Project> {
     const id = this.currentProjectId++;
-    const project: Project = { 
-      ...insertProject, 
+    const project: Project = {
+      ...insertProject,
       id,
       area: insertProject.area || null,
       price: insertProject.price || null,
       possession: insertProject.possession || null,
-      featured: insertProject.featured || false
+      featured: insertProject.featured || false,
     };
     this.projects.set(id, project);
     return project;
@@ -261,12 +393,14 @@ export class MemStorage implements IStorage {
     return Array.from(this.testimonials.values());
   }
 
-  async createTestimonial(insertTestimonial: InsertTestimonial): Promise<Testimonial> {
+  async createTestimonial(
+    insertTestimonial: InsertTestimonial
+  ): Promise<Testimonial> {
     const id = this.currentTestimonialId++;
-    const testimonial: Testimonial = { 
-      ...insertTestimonial, 
+    const testimonial: Testimonial = {
+      ...insertTestimonial,
       id,
-      project: insertTestimonial.project || null
+      project: insertTestimonial.project || null,
     };
     this.testimonials.set(id, testimonial);
     return testimonial;
